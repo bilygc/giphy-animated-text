@@ -3,6 +3,7 @@ import {useState} from 'react'
 import TextList from './components/TextList'
 import Error from './components/Error'
 import './App.css';
+import GiphyPici from './assets/PoweredBy.gif'
 
 const giphy = new GiphyFetch(process.env.REACT_APP_GIPHY_KEY)
 
@@ -73,6 +74,7 @@ function App() {
       {results && <TextList gifs={results} />}
       <div className="col-span-4 sticky bottom-0 bg-white py-3 bg-red-100">
         <h3>Made with ❤ by Bily</h3>
+        <img className="mx-auto w-56 pt-2" src={GiphyPici} alt="Powered by giphy" />
       </div>
     </div>
   );
